@@ -17,7 +17,7 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	paper1 = new Paper(80,680,20,)
+	paper1 = new Paper(80,680,20)
 	ground1 = new Ground(401,height,799,35)
 
 	log1Sprite=createSprite(500,627,7,100)
@@ -46,7 +46,7 @@ function setup() {
 
 
 function draw() {
-  rectMode(CENTER);
+ // rectMode(CENTER);
   background(0);
 
   paper1.display()
