@@ -17,7 +17,7 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	paper1 = new Paper(80,680,20,20)
+	paper1 = new Paper(80,680,20,)
 	ground1 = new Ground(401,height,799,35)
 
 	log1Sprite=createSprite(500,627,7,100)
@@ -30,13 +30,13 @@ function setup() {
 	log3Sprite.shapeColor=color("white")
 
 
-	log1 = Bodies.rectangle(width/2-100,607,7,100,{isStatic:true})
+	log1 = Bodies.rectangle(width/2+100,627,7,100,{isStatic:true})
 	 World.add(world,log1)
 
-	 log2 = Bodies.rectangle(398,635,200,7,{isStatic:true})
+	 log2 = Bodies.rectangle(598,673,200,7,{isStatic:true})
 	 World.add(world,log2)
 
-	log3 = Bodies.rectangle(500,607,7,100,{isStatic:true}) 
+	log3 = Bodies.rectangle(700,627,7,100,{isStatic:true}) 
 	 World.add(world,log3)
 
 
@@ -53,7 +53,7 @@ function draw() {
   ground1.display()
  
 
-  keyPressed()
+  //keyPressed()
   drawSprites();
  
 }
@@ -61,6 +61,6 @@ function draw() {
 function keyPressed(){
 	if (keyCode === UP_ARROW) {
 
-		Matter.Body.applyForce(paper1,this.body.position,{x:85,y:-85});
+		Matter.Body.applyForce(paper1.body,paper1.body.position{x:65,y:-65});
 }
 }
